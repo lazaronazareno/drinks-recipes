@@ -1,6 +1,6 @@
 .drink-container {
-  width: 15%;
-  height: 60vh;
+  width: 18rem;
+  aspect-ratio: 1/1.2;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
@@ -20,8 +20,83 @@
   flex-direction: column;
   justify-content: center;
   font-size: 2rem;
-  word-spacing: 10rem;
   background-color: #f0f8ff66;
   cursor: pointer;
   text-align: center;
+}
+
+.drink-content {
+  display: flex;
+  min-height: 70vh;
+}
+
+.drink-content_image {
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drink-content_image img {
+  width: 30rem;
+  aspect-ratio: 1/1.5;
+  border-radius: 8px;
+}
+
+.drink-content_recipe-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.drink-content_recipe {
+  background-color: aliceblue;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drink-content_recipe h1 {
+  font-size: 5rem;
+  word-wrap: break-word;
+  word-spacing: 1rem;
+}
+
+.drink-content_recipe-ingredients {
+  text-align: left;
+  min-width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .drink-content_recipe-container{
+    flex-direction: column;
+  }
+}
+
+@media (max-width : 900px) {
+
+  .drink-container {
+    width: 30vw;
+  }
+  .drink-content {
+    flex-direction: column;
+    min-height: 50vh;
+  }
+
+  .drink-content_image img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+  }
+
+  .drink-content_recipe h1 {
+    font-size: 3rem;
+  }
+
+  .drink-content_recipe-ingredients {
+    text-align: center;
+  }
 }
