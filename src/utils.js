@@ -1,10 +1,17 @@
 export const showRecipeIngredients = (data) => {
-  const ingredients = []
+  const list = []
 
   for (let i = 1; i < 16; i++) {
     if (data[`strIngredient${i}`]) {
-      ingredients.push(data[`strIngredient${i}`])
+      list.push(data[`strIngredient${i}`])
     }
   }
-  return ingredients
+  return list
+}
+
+export const showRecipePreparation = (preparation) => {
+  const list = preparation.split(/,|\./)
+  list.pop()
+
+  return list
 }
