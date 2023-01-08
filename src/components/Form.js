@@ -24,44 +24,43 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <form
-        onSubmit={handleSubmit}
-      >
-        <div className='mb-3'>
-          <input
-            type='text'
-            className='form-control form-control-lg'
-            name='ingredient'
-            placeholder='Type an ingredient...'
-            onChange={handleChange}
-          />
-        </div>
+    <form
+      className='d-flex flex-column p-2'
+      onSubmit={handleSubmit}
+    >
+      <div className='mb-3'>
+        <input
+          type='text'
+          className='form-control form-control-lg'
+          name='ingredient'
+          placeholder='Type an ingredient...'
+          onChange={handleChange}
+        />
+      </div>
 
-        <div className='mb-3'>
-          <select
-            className='form-select form-select-lg'
-            name='category'
-            onChange={handleChange}
-          >
-            <option value=''>-- Select Category --</option>
-            {categories.map(item => (
-              <option
-                key={item.strCategory}
-                kvalue={item.strCategory}
-              >{item.strCategory}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div className='mb-3'>
+        <select
+          className='form-select form-select-lg'
+          name='category'
+          onChange={handleChange}
+        >
+          <option value=''>-- Select Category --</option>
+          {categories.map(item => (
+            <option
+              key={item.strCategory}
+              kvalue={item.strCategory}
+            >{item.strCategory}
+            </option>
+          ))}
+        </select>
+      </div>
 
-        <button
-          type='submit'
-          className='btn btn-lg btn-primary'
-        >Search Drinks
-        </button>
-      </form>
-    </div>
+      <button
+        type='submit'
+        className='btn btn-lg btn-dark'
+      >Search Drinks
+      </button>
+    </form>
   )
 }
 

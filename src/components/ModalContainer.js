@@ -1,4 +1,5 @@
 import './Modal.css'
+import close from '../assets/cross.png'
 
 const ModalContainer = ({ open, handleButtonClick, children }) => (
   <div
@@ -12,10 +13,12 @@ const ModalContainer = ({ open, handleButtonClick, children }) => (
         : 'content-wrapper'}
     >
       {children}
-      <button
+      <img
+        src={close}
         onClick={handleButtonClick}
-      >Close
-      </button>
+        className='modal-button'
+        alt='Cross icons created by Ilham Fitrotul Hayat - Flaticon'
+      />
     </div>
   </div>
 )
